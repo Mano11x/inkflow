@@ -1,0 +1,46 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>InkFlow</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+    <h1>InkFlow</h1>
+</div>
+
+<div class="container">
+
+{% for post in posts %}
+<div class="card">
+
+    <h2>
+        <a href="/post/{{ post.id }}/">
+            {{ post.title }}
+        </a>
+    </h2>
+
+    <p>{{ post.content|truncatewords:25 }}</p>
+
+    <small>
+        By {{ post.author }}
+    </small>
+
+</div>
+{% empty %}
+<div class="card">
+    <p>No posts available.</p>
+</div>
+{% endfor %}
+
+</div>
+
+<div class="footer">
+    InkFlow 2026
+</div>
+
+</body>
+</html>
