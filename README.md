@@ -1,7 +1,4 @@
 # inkflow
-
-# ✦ InkFlow
-
 A production-ready multilingual blog platform built with Python, Django, and MySQL.
 
 **Features:** User auth · Post CRUD · Draft/Publish workflow · Comment moderation · Profanity filtering · 5-language support (EN/FR/AR/ES/HI) · Dark mode · Responsive editorial UI
